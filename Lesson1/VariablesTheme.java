@@ -1,7 +1,7 @@
 public class VariablesTheme {	
-    public static void main(String[] args) {
+	public static void main(String[] args) {
 		//1. Создание переменных и вывод их значений на консоль
-        System.out.println("1. Создание переменных и вывод их значений на консоль");
+		System.out.println("1. Создание переменных и вывод их значений на консоль");
 		byte b = 109;
 		short s = 32700;
 		int i = 200000;
@@ -21,7 +21,7 @@ public class VariablesTheme {
 		System.out.println("boolean " + bn);
 		
 		//2. Расчет стоимости товара со скидкой
-        System.out.println("");
+		System.out.println("");
 		System.out.println("2. Расчет стоимости товара со скидкой");
 		int productx = 100;
 		int producty = 200;	
@@ -33,7 +33,7 @@ public class VariablesTheme {
 		System.out.println("Скидка " + sumdiscount);
 		
 		//3. Вывод на консоль слова JAVA
-        System.out.println("");
+		System.out.println("");
 		System.out.println("3. Вывод на консоль слова JAVA");
 		System.out.println("   J    a  v     v  a");
 		System.out.println("   J   a a  v   v  a a");
@@ -41,7 +41,7 @@ public class VariablesTheme {
 		System.out.println(" JJ  a     a  V  a     a");
 		 		
 		//4. Отображение min и max значений числовых типов данных
-        System.out.println("");
+		System.out.println("");
 		System.out.println("4. Отображение min и max значений числовых типов данных");
 		
 		byte byte_max = 127;
@@ -50,7 +50,7 @@ public class VariablesTheme {
 		System.out.println("byte MAX+1 " + byte_max);
 		byte_max = (byte) (byte_max - 1);
 		System.out.println("byte MAX-1 " + byte_max);
-	
+		
 		short short_max = 32767;
 		System.out.println("short MAX " + short_max);
 		short_max = (short) (short_max + 1);
@@ -88,7 +88,7 @@ public class VariablesTheme {
 		
 		//5. Перестановка значений переменных
 		System.out.println("");
-        System.out.println("5. Перестановка значений переменных");
+		System.out.println("5. Перестановка значений переменных");
 		float variable1 = 5.78F;
 		float variable2 = 9.63F;
 		float variable_vrem;
@@ -105,7 +105,7 @@ public class VariablesTheme {
 		
 		//6. Вывод ASCII-символов и их кодов
 		System.out.println("");
-        System.out.println("6. Вывод ASCII-символов и их кодов");
+		System.out.println("6. Вывод ASCII-символов и их кодов");
 		
 		int var1 = 35;
 		int var2 = 38;
@@ -120,7 +120,7 @@ public class VariablesTheme {
 		
 		//7. Произведение и сумма цифр числа
 		System.out.println("");
-        System.out.println("7. Произведение и сумма цифр числа");
+		System.out.println("7. Произведение и сумма цифр числа");
 		int variable = 345;
 		int hundreds = variable / 100;
 		int tens = (variable - hundreds * 100) / 10;
@@ -132,14 +132,8 @@ public class VariablesTheme {
 		
 		//8. Вывод на консоль ASCII-арт Дюка
 		System.out.println("");
-        System.out.println("8. Вывод на консоль ASCII-арт Дюка");
-		/*
-			/\                                                                                                                                       
-		   /  \                                                                                                                                      
-		  /_( )\                                                                                                                                     
-		 /      \                                                                                                                                    
-		/____/\__\
-		*/
+		System.out.println("8. Вывод на консоль ASCII-арт Дюка");
+		
 		String  s1 = "/";
 		String  s2 = "\\";
 		String  s3 = "_";
@@ -151,10 +145,10 @@ public class VariablesTheme {
 		System.out.println(pr + pr + s1 + s3 + s4 + pr + s5 + s2);
 		System.out.println(pr + s1 + pr + pr + pr + pr + pr + pr + s2);
 		System.out.println(s1 + s3 + s3 + s3 + s3 + s1 + s2 + s3 + s3 + s2);
-
+		
 		//9. Отображение сотен, десятков, единиц числа
 		System.out.println("");
-        System.out.println("9. Отображение сотен, десятков, единиц числа");
+		System.out.println("9. Отображение сотен, десятков, единиц числа");
 		variable = 123;
 		hundreds = variable/100;
 		tens = (variable - hundreds * 100) / 10;
@@ -164,14 +158,14 @@ public class VariablesTheme {
 		System.out.println("Сотни: " + hundreds);
 		System.out.println("Десятки: " + tens);
 		System.out.println("Единицы: " + units);
-					
+		
 		//10. Преобразование секунд
 		System.out.println("");
-        System.out.println("10. Преобразование секунд");
+		System.out.println("10. Преобразование секунд");
 		int variable_sec = 86399;
 		int hour = variable_sec /60 / 60;
 		int minute = (variable_sec - hour * 60 * 60) / 60;
 		int seconds = (variable_sec - hour * 60 * 60 - minute * 60);
 		System.out.println(hour + ":" + minute + ":" + seconds);
-    }
+	}
 }
