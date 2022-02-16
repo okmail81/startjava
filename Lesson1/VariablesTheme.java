@@ -138,8 +138,8 @@ public class VariablesTheme {
         System.out.println("\n10. Преобразование секунд");
         int srcSec = 86399;
         int hour = srcSec /60 / 60;
-        int minute = srcSec /60 %60;
-        int seconds = srcSec %60;;
+        int minute = srcSec /60 % 60;
+        int seconds = srcSec % 60;;
         System.out.println(hour + ":" + minute + ":" + seconds);
     }
 }
