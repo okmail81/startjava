@@ -71,33 +71,33 @@ public class VariablesTheme {
         
         //5. Перестановка значений переменных
         System.out.println("\n\n5. Перестановка значений переменных");
-        float variable1 = 5.78F;
-        float variable2 = 9.63F;
-        float temporaryVariable;
+        float num1 = 5.78F;
+        float num2 = 9.63F;
+        float numTemp;
         
-        System.out.println("variable1 " + variable1);
-        System.out.println("variable2 " + variable2);
+        System.out.println("num1 " + num1);
+        System.out.println("num2 " + num2);
         
-        temporaryVariable = variable1;
-        variable1 = variable2;
-        variable2 = temporaryVariable;
+        numTemp = num1;
+        num1 = num2;
+        num2 = numTemp;
         
-        System.out.println("variable1 " + variable1);
-        System.out.println("variable2 " + variable2);
+        System.out.println("num1 " + num1);
+        System.out.println("num2 " + num2);
         
         //6. Вывод ASCII-символов и их кодов
         System.out.println("\n6. Вывод ASCII-символов и их кодов");
         
-        int var1 = 35;
-        int var2 = 38;
-        int var3 = 64;
-        int var4 = 94;
-        int var5 = 95;
-        System.out.println("" + var1 + ": " + (char) var1);
-        System.out.println("" + var2 + ": " + (char) var2);
-        System.out.println("" + var3 + ": " + (char) var3);
-        System.out.println("" + var4 + ": " + (char) var4);
-        System.out.println("" + var5 + ": " + (char) var5);
+        int numChar1 = 35;
+        int numChar2 = 38;
+        int numChar3 = 64;
+        int numChar4 = 94;
+        int numChar5 = 95;
+        System.out.println("" + numChar1 + ": " + (char) numChar1);
+        System.out.println("" + numChar2 + ": " + (char) numChar2);
+        System.out.println("" + numChar3 + ": " + (char) numChar3);
+        System.out.println("" + numChar4 + ": " + (char) numChar4);
+        System.out.println("" + numChar5 + ": " + (char) numChar5);
         
         //7. Произведение и сумма цифр числа
         System.out.println("\n7. Произведение и сумма цифр числа");
@@ -105,10 +105,9 @@ public class VariablesTheme {
         int hundreds = srcNumber / 100;
         int tens = srcNumber /10 % 10;
         int units = srcNumber % 10;
-        int sum = hundreds + tens + units;
-        int multiply = hundreds * tens * units;
-        System.out.println("Сумма: " + sum);
-        System.out.println("Произведение: " + multiply);
+        int sumDigits = hundreds + tens + units;
+        System.out.println("Сумма: " + sumDigits);
+        System.out.println("Произведение: " + hundreds * tens * units);
         
         //8. Вывод на консоль ASCII-арт Дюка
         System.out.println("\n8. Вывод на консоль ASCII-арт Дюка");
@@ -137,10 +136,10 @@ public class VariablesTheme {
         
         //10. Преобразование секунд
         System.out.println("\n10. Преобразование секунд");
-        int variable_sec = 86399;
-        int hour = variable_sec /60 / 60;
-        int minute = (variable_sec - hour * 60 * 60) / 60;
-        int seconds = (variable_sec - hour * 60 * 60 - minute * 60);
+        int srcSec = 86399;
+        int hour = srcSec /60 / 60;
+        int minute = srcSec /60 %60;
+        int seconds = srcSec %60;;
         System.out.println(hour + ":" + minute + ":" + seconds);
     }
 }
