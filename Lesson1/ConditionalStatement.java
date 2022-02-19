@@ -4,25 +4,28 @@ public class ConditionalStatement {
         System.out.println("\n1. Перевод псевдокода на язык Java\n");
         
         byte age = 23;
-        boolean isMail = false;
-        float height = 1.75F;
-        String name = "Oleg";
         
         if(age > 20) {
             System.out.println("Возраст = " + age + " - может участвовать");
         } else {
             System.out.println("Возраст = " + age + " - не может участвовать");
         }
-
+        
+        boolean isMail = false;
+        
         if(!isMail) {
             System.out.println("Женский пол - поместить в другую группу");
         }
+        
+        float height = 1.75F;
         
         if(height < 1.80) {
             System.out.println("Рост меньше 1.8 - в танковые войска");
         } else {
             System.out.println("Рост больше 1.8 - в ВДВ");
         }
+        
+        String name = "Oleg";
         
         char firstLetterName = name.charAt(0);
         if(firstLetterName == 'M') {
@@ -35,7 +38,7 @@ public class ConditionalStatement {
         
         //2. Поиск максимального и минимального числа
         System.out.println("\n2. Поиск максимального и минимального числа");
-        int num1 = 0;
+        int num1 = 130;
         int num2 = 1870;
         if(num1 > num2) {
             System.out.println("Максимальное число - " + num1 + ", минимальное число " + num2);
@@ -63,7 +66,7 @@ public class ConditionalStatement {
         System.out.println("\n4. Поиск общей цифры в числах");
         num1 = 345;
         num2 = 975;
-        if(num1 / 100 == num2 / 100) {
+        if((num1 / 100) == (num2 / 100)) {
             System.out.println("Цифра 1 в числах " + num1 + " и " + num2 + " одинаковая");
         }
         if(num1 / 10 % 10 == num2 / 10 % 10) {
@@ -76,10 +79,11 @@ public class ConditionalStatement {
         //5. Определение буквы или символа по их коду
         System.out.println("\n5. Определение буквы или символа по их коду");
         char elementСode = '\u005A';
-        System.out.print("В переменной символ " + elementСode + " с кодом " + (int)elementСode);
-        if((int)elementСode >= 48 && (int)elementСode <=57){
+        int elementNumber = (int) elementСode;
+        System.out.print("В переменной символ " + elementСode + " с кодом " + elementNumber);
+        if(elementNumber >= 48 && elementNumber <= 57) {
             System.out.println(" - это число");
-        } else if(((int)elementСode >= 65 && (int)elementСode <= 90) || ((int)elementСode >= 97 && (int)elementСode <= 122)) { 
+        } else if((elementNumber >= 65 && elementNumber <= 90) || (elementNumber >= 97 && elementNumber <= 122)) { 
             System.out.println(" - это буква");
         } else {
             System.out.println(" - это не буква и не число");
@@ -88,16 +92,17 @@ public class ConditionalStatement {
         //6. Определение суммы вклада и начисленных банком %
         System.out.println("\n6. Определение суммы вклада и начисленных банком %");
         float depositAmount = 300000.0F;
-        float  depositPercentage;
+        float depositPercentage;
         if(depositAmount < 100000) {
             depositPercentage = 5;
-        } else if(depositAmount >= 100000 || depositAmount <= 300000) {
+        } else if(depositAmount >= 100000 && depositAmount <= 300000) {
             depositPercentage = 7;
         } else {
             depositPercentage = 10;
         }
-        float TotalSum = depositAmount + depositAmount * depositPercentage / 100;
-        System.out.println("Сумма вклада - " + depositAmount + ", начисленный процент - " + depositAmount * depositPercentage / 100 + ", итог - " + TotalSum);
+        float totalPercentage = depositAmount * depositPercentage / 100;
+        float totalSum = depositAmount + totalPercentage;
+        System.out.println("Сумма вклада - " + depositAmount + ", начисленный процент - " + totalPercentage + ", итог - " + totalSum);
         
         //7. Определение оценки по предметам
         System.out.println("\n7. Определение оценки по предметам");
@@ -127,23 +132,18 @@ public class ConditionalStatement {
             scoreProgramming = 4;
         }
         System.out.println("Программирование - " + scoreProgramming);
-        
-        int averageScore = (scoreHistory + scoreProgramming) / 2;
-        System.out.println("Средний балл - " + averageScore);
-        
-        int averagePercentage = (percentageHistory + percentageProgramming) / 2;
-        System.out.println("Средний процент - " + averagePercentage);
+        System.out.println("Средний балл - " + (int) (scoreHistory + scoreProgramming) / 2);
+        System.out.println("Средний процент - " + (int) (percentageHistory + percentageProgramming) / 2);
         
         //8. Расчет прибыли (убытка)
         System.out.println("\n8. Расчет прибыли (убытка)");
         int roomRent = 5000;
         int proceeds = 15000;
         int costPrice = 9000;
-        int financialResult = proceeds * 12 - roomRent * 12 - costPrice * 12;
+        int financialResult = (proceeds - roomRent - costPrice) * 12;
         if(financialResult > 0) {
             System.out.println("Прибыль: " + financialResult);
         } else {
-            financialResult = -financialResult;
             System.out.println("Убыток: " + financialResult);
         }
        
@@ -152,15 +152,13 @@ public class ConditionalStatement {
         double sideA = 5;
         double sideB = 5;
         double sideC = 7;
-        double halfMeter = (sideA + sideB + sideC) / 2;
-        double areaTriangle = Math.sqrt(halfMeter * (halfMeter - sideA) * (halfMeter - sideB) * (halfMeter - sideC));
         
-        if(sideA + sideB > sideC && sideB + sideC > sideA && sideC + sideA > sideB) {
+        if((sideA + sideB) > sideC && (sideB + sideC) > sideA && (sideC + sideA) > sideB) {
             System.out.println("Треугольник существует");
         } else {
             System.out.println("Треугольник не существует");
         }
-        System.out.println("Полупериметр - " + halfMeter);
+        double areaTriangle = sideA * sideB / 2;
         System.out.println("Площадь треугольника - " + areaTriangle);
         char backslash = '\\';
         char underscore = '_';
@@ -179,9 +177,6 @@ public class ConditionalStatement {
        int banknote10 = amount % 50 / 10;
        int banknote1 = amount % 50 % 10;
        System.out.println("Банкнот 50 - " + banknote50 + ", банкнот 10 - " + banknote10 + ", банкнот 1 - " + banknote1);
-       banknote50 = 11;
-       banknote10 = 1;
-       banknote1 = 7;
        amount = banknote50 * 50 + banknote10 * 10 + banknote1;
        System.out.println("Выдаваемая сумма - " + amount);
        
