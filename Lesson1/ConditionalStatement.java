@@ -69,10 +69,10 @@ public class ConditionalStatement {
         if((num1 / 100) == (num2 / 100)) {
             System.out.println("Цифра 1 в числах " + num1 + " и " + num2 + " одинаковая");
         }
-        if(num1 / 10 % 10 == num2 / 10 % 10) {
+        if((num1 / 10 % 10) == (num2 / 10 % 10)) {
             System.out.println("Цифра 2 в числах " + num1 + " и " + num2 + " одинаковая");
         }
-        if(num1 % 10 == num2 % 10) {
+        if((num1 % 10) == (num2 % 10)) {
             System.out.println("Цифра 3 в числах " + num1 + " и " + num2 + " одинаковая");
         }
         
