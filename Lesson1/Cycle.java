@@ -2,7 +2,7 @@ public class Cycle {
     public static void main(String[] args) {
         //1. Выведите на консоль с помощью цикла for все числа от [0, 20]
         System.out.println("\n1. Выведите на консоль с помощью цикла for все числа от [0, 20]");
-        for (int i = 0; i <= 20; i++) {
+        for(int i = 0; i <= 20; i++) {
             System.out.println("Число " + i);
         }
         
@@ -10,7 +10,7 @@ public class Cycle {
         System.out.println("\n2. Выведите на консоль с помощью цикла while все числа от [6, -6] (с шагом итерации 2)");
         
         int i = 6;
-        while (i >= -6) {
+        while(i >= -6) {
             System.out.println("Число " + i);
             i = i - 2;
         }
