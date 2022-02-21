@@ -21,7 +21,7 @@ public class Cycle {
         do {
             if (counter % 2 > 0) {
                 System.out.println("Число " + counter);
-                sumOdd = sumOdd + counter;
+                sumOdd += counter;
             }
             counter++;
         } while(counter <= 20);
