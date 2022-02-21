@@ -2,8 +2,8 @@ public class Cycle {
     public static void main(String[] args) {
         //1. Выведите на консоль с помощью цикла for все числа от [0, 20]
         System.out.println("\n1. Выведите на консоль с помощью цикла for все числа от [0, 20]");
-        for(int counter = 0; counter <= 20; counter++) {
-            System.out.println("Число " + counter);
+        for(int i = 0; i <= 20; i++) {
+            System.out.println("Число " + i);
         }
         
         //2. Выведите на консоль с помощью цикла while все числа от [6, -6] (с шагом итерации 2)

@@ -1,23 +1,23 @@
 public class Calculator {
     public static void main(String[] args) {
         int num1 = 16;
-        int num2 = 8;
-        String arithmeticSign = "/";
+        int num2 = 3;
+        char arithmeticSign = '^';
         long result = 1;
         
-        if(arithmeticSign == "+") {
+        if(arithmeticSign == '+') {
             result = num1 + num2;
-        } else if(arithmeticSign == "-") {
+        } else if(arithmeticSign == '-') {
             result = num1 - num2;
-        } else if(arithmeticSign == "*") {
+        } else if(arithmeticSign == '*') {
             result = num1 * num2;
-        } else if(arithmeticSign == "/") {
+        } else if(arithmeticSign == '/') {
             result = num1 / num2;
-        } else if(arithmeticSign == "%") {
+        } else if(arithmeticSign == '%') {
             result = num1 % num2;
-        } else if(arithmeticSign == "^") {
-            for(int i = 1; i<=num2; i++) {
-                result = result * num1;
+        } else if(arithmeticSign == '^') {
+            for(int i = 1; i <= num2; i++) {
+                result *= num1;
             }
         }
         System.out.println("Результат вычисления операции " + num1 + arithmeticSign + num2 + "=" + result);
