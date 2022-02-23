@@ -1,6 +1,5 @@
 public class WolfTest {
     public static void main(String[] args) {
-        
         Wolf myWolf = new Wolf();
         myWolf.sex = 'm';
         myWolf.nickname = "Феликс";
@@ -15,9 +14,9 @@ public class WolfTest {
         System.out.println("Окрас волка - " + myWolf.color + "\n");
         
         myWolf.move();
-        myWolf.howling();
-        myWolf.running();
-        myWolf.sitting();
-        myWolf.hunting();
+        myWolf.howl();
+        myWolf.run();
+        myWolf.sit();
+        myWolf.hunt();
     }
 }

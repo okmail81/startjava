@@ -1,5 +1,4 @@
 public class Person {
-    
     String name = "Олег";
     char sex = 'm';
     float height = 180.0f;
@@ -10,15 +9,15 @@ public class Person {
         System.out.println("Идет");
     }
     
-    void running() {
+    void run() {
         System.out.println("Бежит");
     }
     
-    void saying() {
+    void say() {
         System.out.println("Говорит");
     }
     
-    void sitting() {
+    void sit() {
         System.out.println("Сидит");
     }
 }

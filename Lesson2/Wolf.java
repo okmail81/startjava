@@ -1,5 +1,4 @@
 public class Wolf {
-    
     char sex;
     String nickname;
     float weight;
@@ -10,19 +9,19 @@ public class Wolf {
         System.out.println("Волк идет");
     }
     
-    void howling() {
+    void howl() {
         System.out.println("Волк воет");
     }
     
-    void running() {
+    void run() {
         System.out.println("Волк бежит");
     }
     
-    void sitting() {
+    void sit() {
         System.out.println("Волк сидит");
     }
     
-    void hunting() {
+    void hunt() {
         System.out.println("Волк охотится");
     }
 }
