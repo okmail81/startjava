@@ -1,21 +1,23 @@
 import java.util.Scanner;
 
+import java.util.Random;
+
 public class GuessNumber {
     private Player player1;
     private Player player2;
-    private int randomNumber;
     
-    public GuessNumber(Player player1, Player player2, int randomNumber) {
+    public GuessNumber(Player player1, Player player2) {
         this.player1 = player1;
         this.player2 = player2;
-        this.randomNumber = randomNumber;
     }
+    
+    public void guess() {
+        Random random = new Random();
+        int randomNumber = random.nextInt(100);
         
-    public void Guess() {
         Scanner scan = new Scanner(System.in);
         
-        while(player1.getNumber() != randomNumber && player2.getNumber() != randomNumber) {
-            
+        while(true) {
             System.out.println("Введите число первого игрока:");
             player1.setNumber(scan.nextInt());
             if(player1.getNumber() > randomNumber) {
@@ -24,7 +26,7 @@ public class GuessNumber {
                 System.out.println("Число введенное первым игроком меньше того, что загадал компьютер");
             } else {
                 System.out.println("Число угадано первым игроком! - " + player1.getName());
-            continue;
+                break;
             }
             
             System.out.println("Введите число второго игрока:");
@@ -35,7 +37,7 @@ public class GuessNumber {
                 System.out.println("Число введенное вторым игроком меньше того, что загадал компьютер");
             } else {
                 System.out.println("Число угадано вторым игроком!- " + player2.getName());
-            continue;
+                break;
             }
         }
     }

@@ -21,11 +21,10 @@ public class CalculatorTest {
             System.out.println("Результат вычисления операции " + num1 + sign + num2 + "=" + result);
             scan.nextLine();
             
-            answer = "";
-            while(!(answer.equals("yes") || answer.equals("no"))) {
+            do {
                 System.out.println("Хотите продолжить вычисления? [yes/no]:");
                 answer = scan.nextLine();
-            }
+            }  while(!(answer.equals("yes") || answer.equals("no")));
         }
     }
 }
