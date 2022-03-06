@@ -13,7 +13,7 @@ public class GuessNumber {
     
     public void guess() {
         Random random = new Random();
-        int randomNumber = random.nextInt(101);
+        int randomNumber = random.nextInt(100);
         
         Scanner scan = new Scanner(System.in);
         
