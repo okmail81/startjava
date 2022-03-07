@@ -1,4 +1,4 @@
-package com.startjava.Lesson2.person;
+package com.startjava.Lesson2_3.person;
 
 public class Person {
     String name = "Олег";
