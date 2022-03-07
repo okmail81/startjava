@@ -1,3 +1,5 @@
+package com.startjava.Lesson1.conditionalstatement;
+
 public class ConditionalStatement {
     public static void main(String[] args) {
         //1. Перевод псевдокода на язык Java

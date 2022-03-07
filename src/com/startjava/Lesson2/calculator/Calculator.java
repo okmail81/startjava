@@ -1,3 +1,5 @@
+package com.startjava.Lesson2.calculator;
+
 public class Calculator {
     public int calculate(int num1, int num2, char sign) {
         int result = 0;
