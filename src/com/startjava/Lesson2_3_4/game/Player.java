@@ -2,8 +2,9 @@ package com.startjava.Lesson2_3_4.game;
 
 public class Player {
     private String name;
-    private int number;
-    
+    private int userAttempt;
+    private int[] droppedNumbers = new int[10];
+
     public Player(String name) {
         this.name = name;
     }
@@ -12,11 +13,19 @@ public class Player {
         return name;
     }
     
-    public void setNumber(int number) {
-        this.number = number;
+    public void setUserAttempt(int userAttempt) {
+        this.userAttempt = userAttempt;
     }
     
-    public int getNumber() {
-        return number;
+    public int getUserAttempt() {
+        return userAttempt;
+    }
+
+    public int[] getDroppedNumbers() {
+        return droppedNumbers;
+    }
+
+    public void setDroppedNumbers(int Number, int userAttempt) {
+        this.droppedNumbers[userAttempt-1] = Number;
     }
 }
