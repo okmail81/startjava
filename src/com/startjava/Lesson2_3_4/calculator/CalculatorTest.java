@@ -9,20 +9,16 @@ public class CalculatorTest {
         
         while(answer.equals("yes")) {
             Scanner scan = new Scanner(System.in);
-            System.out.println("Введите первое число:");
-            int num1 = scan.nextInt();
+
+            System.out.print("Введите математическое выражение: ");
+            String expression = scan.nextLine();
+            String[] arrayExpression;
+            arrayExpression = expression.split(" ");
+
+            int result = calculator.calculate(arrayExpression);
             
-            System.out.println("Введите знак математической операции:");
-            char sign = scan.next().charAt(0);
-            
-            System.out.println("Введите второе число:");
-            int num2 = scan.nextInt();
-            
-            int result = calculator.calculate(num1, num2, sign);
-            
-            System.out.println("Результат вычисления операции " + num1 + sign + num2 + "=" + result);
-            scan.nextLine();
-            
+            System.out.println("Результат вычисления операции " + arrayExpression[0] + arrayExpression[1] + arrayExpression[2] + "=" + result);
+
             do {
                 System.out.println("Хотите продолжить вычисления? [yes/no]:");
                 answer = scan.nextLine();
