@@ -23,11 +23,14 @@ public class GuessNumber {
         int userAttempt = 1;
 
         while(userAttempt <= 10) {
-
             tryGuessNumber(player1, 1, userAttempt, randomNumber, scan);
 
             if (player1.getDroppedNumbers()[userAttempt-1] == randomNumber) {
                 break;
+            }
+
+            if (player1.getUserAttempt() == 10) {
+                System.out.print("У игрока " + player1.getName() + " закончились попытки\n");
             }
 
             tryGuessNumber(player2, 2, userAttempt, randomNumber, scan);
@@ -35,6 +38,11 @@ public class GuessNumber {
             if (player2.getDroppedNumbers()[userAttempt-1] == randomNumber) {
                 break;
             }
+
+            if (player2.getUserAttempt() == 10) {
+                System.out.print("У игрока " + player2.getName() + " закончились попытки\n");
+            }
+
             userAttempt++;
         }
 
