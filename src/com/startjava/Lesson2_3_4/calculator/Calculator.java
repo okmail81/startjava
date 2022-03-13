@@ -1,8 +1,10 @@
 package com.startjava.Lesson2_3_4.calculator;
 
 public class Calculator {
-    public int calculate(String[] arrayExpression) {
+    public int calculate(String expression) {
         int result = 0;
+        String[] arrayExpression = expression.split(" ");
+
         int num1 = Integer.parseInt(arrayExpression[0]);
         int num2 = Integer.parseInt(arrayExpression[2]);
         switch(arrayExpression[1]) {

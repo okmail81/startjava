@@ -1,31 +1,43 @@
 package com.startjava.Lesson2_3_4.game;
 
+import java.util.Arrays;
+
 public class Player {
     private String name;
-    private int userAttempt;
-    private int[] droppedNumbers = new int[10];
+    private int attempt;
+    private int[] enteredNumbers = new int[10];
+    private int numberPlayer;
 
-    public Player(String name) {
+    public Player(String name, int numberPlayer) {
         this.name = name;
+        this.numberPlayer = numberPlayer;
     }
     
     public String getName() {
         return name;
     }
     
-    public void setUserAttempt(int userAttempt) {
-        this.userAttempt = userAttempt;
+    public void setAttempt(int attempt) {
+        this.attempt = attempt;
     }
     
-    public int getUserAttempt() {
-        return userAttempt;
+    public int getAttempt() {
+        return attempt;
     }
 
-    public int[] getDroppedNumbers() {
-        return droppedNumbers;
+    public int[] getEnteredNumbers() {
+        return Arrays.copyOf(enteredNumbers, enteredNumbers.length);
     }
 
-    public void setDroppedNumbers(int Number, int userAttempt) {
-        this.droppedNumbers[userAttempt-1] = Number;
+    public void addNumber(int number) {
+        this.enteredNumbers[attempt - 1] = number;
+    }
+
+    public int getNumberPlayer() {
+        return numberPlayer;
+    }
+
+    public int getLastNumber() {
+        return enteredNumbers[attempt - 1];
     }
 }

@@ -12,12 +12,10 @@ public class CalculatorTest {
 
             System.out.print("Введите математическое выражение: ");
             String expression = scan.nextLine();
-            String[] arrayExpression;
-            arrayExpression = expression.split(" ");
 
-            int result = calculator.calculate(arrayExpression);
+            int result = calculator.calculate(expression);
             
-            System.out.println("Результат вычисления операции " + arrayExpression[0] + arrayExpression[1] + arrayExpression[2] + "=" + result);
+            System.out.println("Результат вычисления операции " + expression.replace(" ", "") + "=" + result);
 
             do {
                 System.out.println("Хотите продолжить вычисления? [yes/no]:");
