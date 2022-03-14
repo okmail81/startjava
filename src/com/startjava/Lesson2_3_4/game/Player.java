@@ -6,11 +6,9 @@ public class Player {
     private String name;
     private int attempt;
     private int[] enteredNumbers = new int[10];
-    private int numberPlayer;
 
-    public Player(String name, int numberPlayer) {
+    public Player(String name) {
         this.name = name;
-        this.numberPlayer = numberPlayer;
     }
     
     public String getName() {
@@ -25,19 +23,21 @@ public class Player {
         return attempt;
     }
 
-    public int[] getEnteredNumbers() {
-        return Arrays.copyOf(enteredNumbers, enteredNumbers.length);
+    public void printEnteredNumbers() {
+        for(int i = 0; i < attempt; i++) {
+            System.out.print(enteredNumbers[i] + " ");
+        }
     }
 
     public void addNumber(int number) {
         this.enteredNumbers[attempt - 1] = number;
     }
 
-    public int getNumberPlayer() {
-        return numberPlayer;
-    }
-
     public int getLastNumber() {
         return enteredNumbers[attempt - 1];
+    }
+
+    public void fillArray() {
+        Arrays.fill(enteredNumbers, 0, attempt, 0);
     }
 }
