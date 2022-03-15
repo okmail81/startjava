@@ -16,7 +16,6 @@ public class GuessNumber {
     public void guess() {
         Random random = new Random();
         int randomNumber = random.nextInt(100) + 1;
-        System.out.println("randomNumber = " + randomNumber);
         Scanner console = new Scanner(System.in);
 
         player1.fillArray();
@@ -55,10 +54,10 @@ public class GuessNumber {
         player2.printEnteredNumbers();
     }
 
-    private boolean tryGuessNumber(Player player, int randomNumber, Scanner scan) {
+    private boolean tryGuessNumber(Player player, int randomNumber, Scanner console) {
 
         System.out.println("Введите число игрока " + player.getName() +  ":");
-        player.addNumber(scan.nextInt());
+        player.addNumber(console.nextInt());
         if(player.getLastNumber() > randomNumber) {
             System.out.println("Число введенное игроком " + player.getName() +  " больше того, что загадал компьютер");
             return false;
