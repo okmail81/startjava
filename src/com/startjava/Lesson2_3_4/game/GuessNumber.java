@@ -25,7 +25,7 @@ public class GuessNumber {
             player1.setAttempt(player1.getAttempt() + 1);
             player2.setAttempt(player2.getAttempt() + 1);
 
-            if(tryGuessNumber(player1, console)) {
+            if (tryGuessNumber(player1, console)) {
                 break;
             }
 
@@ -33,7 +33,7 @@ public class GuessNumber {
                 System.out.print("У игрока " + player1.getName() + " закончились попытки\n");
             }
 
-           if (tryGuessNumber(player2, console)) {
+            if (tryGuessNumber(player2, console)) {
                break;
            }
 
