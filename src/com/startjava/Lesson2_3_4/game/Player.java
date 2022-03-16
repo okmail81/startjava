@@ -23,10 +23,12 @@ public class Player {
         return attempt;
     }
 
-    public void printEnteredNumbers() {
-        for(int i = 0; i < attempt; i++) {
-            System.out.print(enteredNumbers[i] + " ");
+    public String getEnteredNumbers() {
+        String result = "";
+        for (int i = 0; i < attempt; i++) {
+            result = result + " " + enteredNumbers[i];
         }
+        return result;
     }
 
     public void addNumber(int number) {
