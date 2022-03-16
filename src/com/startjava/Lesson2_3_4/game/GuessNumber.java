@@ -36,10 +36,8 @@ public class GuessNumber {
             checkNumberOfAttempts (player2);
         }
 
-        System.out.print("\nЧисла названные первым игроком - ");
         printEnteredNumbers(player1);
 
-        System.out.print("\nЧисла названные вторым игроком - ");
         printEnteredNumbers(player2);
     }
 
@@ -69,6 +67,7 @@ public class GuessNumber {
     }
 
     private void printEnteredNumbers (Player player) {
+        System.out.print("\nЧисла названные игроком " + player.getName() + " - ");
         int[] enteredNumbers = player.getEnteredNumbers();
         for (int i = 0; i < enteredNumbers.length; i++) {
             System.out.print(" " + enteredNumbers[i]);
