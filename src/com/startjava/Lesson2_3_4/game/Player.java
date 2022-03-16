@@ -23,12 +23,8 @@ public class Player {
         return attempt;
     }
 
-    public String getEnteredNumbers() {
-        String result = "";
-        for (int i = 0; i < attempt; i++) {
-            result = result + " " + enteredNumbers[i];
-        }
-        return result;
+    public int[] getEnteredNumbers() {
+        return Arrays.copyOf(enteredNumbers, attempt);
     }
 
     public void addNumber(int number) {

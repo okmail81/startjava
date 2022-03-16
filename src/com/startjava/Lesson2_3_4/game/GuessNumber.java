@@ -28,25 +28,19 @@ public class GuessNumber {
             if (tryGuessNumber(player1, console)) {
                 break;
             }
-
-            if (player1.getAttempt() == 10) {
-                System.out.print("У игрока " + player1.getName() + " закончились попытки\n");
-            }
+            checkNumberOfAttempts (player1);
 
             if (tryGuessNumber(player2, console)) {
                break;
-           }
-
-            if (player2.getAttempt() == 10) {
-                System.out.print("У игрока " + player2.getName() + " закончились попытки\n");
             }
+            checkNumberOfAttempts (player2);
         }
 
         System.out.print("\nЧисла названные первым игроком - ");
-        System.out.println(player1.getEnteredNumbers());
+        printEnteredNumbers(player1);
 
         System.out.print("\nЧисла названные вторым игроком - ");
-        System.out.println(player2.getEnteredNumbers());
+        printEnteredNumbers(player2);
     }
 
     private boolean tryGuessNumber(Player player, Scanner console) {
@@ -72,6 +66,19 @@ public class GuessNumber {
 
         player1.setAttempt(0);
         player2.setAttempt(0);
+    }
+
+    private void printEnteredNumbers (Player player) {
+        int[] enteredNumbers = player.getEnteredNumbers();
+        for (int i = 0; i < enteredNumbers.length; i++) {
+            System.out.print(" " + enteredNumbers[i]);
+        }
+    }
+
+    private void checkNumberOfAttempts (Player player) {
+        if (player.getAttempt() == 10) {
+            System.out.print("У игрока " + player.getName() + " закончились попытки\n");
+        }
     }
 }
 
