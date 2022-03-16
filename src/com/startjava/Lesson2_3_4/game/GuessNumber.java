@@ -16,9 +16,7 @@ public class GuessNumber {
     
     public void guess() {
         init();
-
         Scanner console = new Scanner(System.in);
-
         System.out.println("У каждого игрока будет 10 попыток");
 
         while(player1.getAttempt() < 10) {
@@ -37,7 +35,6 @@ public class GuessNumber {
         }
 
         printEnteredNumbers(player1);
-
         printEnteredNumbers(player2);
     }
 
@@ -66,20 +63,17 @@ public class GuessNumber {
         player2.setAttempt(0);
     }
 
-    private void printEnteredNumbers (Player player) {
+    private void printEnteredNumbers(Player player) {
         System.out.print("\nЧисла названные игроком " + player.getName() + " - ");
         int[] enteredNumbers = player.getEnteredNumbers();
-        for (int i = 0; i < enteredNumbers.length; i++) {
-            System.out.print(" " + enteredNumbers[i]);
+        for (int i :enteredNumbers) {
+            System.out.print(" " + i);
         }
     }
 
-    private void checkNumberOfAttempts (Player player) {
+    private void checkNumberOfAttempts(Player player) {
         if (player.getAttempt() == 10) {
             System.out.print("У игрока " + player.getName() + " закончились попытки\n");
         }
     }
 }
-
-
-
